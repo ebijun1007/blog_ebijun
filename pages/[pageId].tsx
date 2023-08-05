@@ -14,6 +14,15 @@ export const getStaticProps: GetStaticProps<PageProps, Params> = async (
 
   try {
     const props = await resolveNotionPage(domain, rawPageId)
+    if (props?.error) {
+      // return 404 page instead of the error page
+      return {
+        redirect: {
+          destination: '/404',
+          permanent: false
+        }
+      }
+    }
 
     return { props, revalidate: 60 }
   } catch (err) {
