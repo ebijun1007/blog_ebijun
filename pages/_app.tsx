@@ -1,9 +1,12 @@
 // global styles shared across the entire site
-import * as React from 'react'
-import type { AppProps } from 'next/app'
-import { useRouter } from 'next/router'
+import * as React from 'react';
+import type { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
+
+
 
 import * as Fathom from 'fathom-client'
+import { Analytics } from '@vercel/analytics/react'
 import posthog from 'posthog-js'
 // used for code syntax highlighting (optional)
 import 'prismjs/themes/prism-coy.css'
@@ -59,5 +62,10 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }, [router.events])
 
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Component {...pageProps} />
+      <Analytics />
+    </>
+  )
 }
