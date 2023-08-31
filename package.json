@@ -58,6 +58,7 @@
     "rss": "^1.2.2"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.6.0",
     "@next/bundle-analyzer": "^12.3.1",
     "@trivago/prettier-plugin-sort-imports": "^3.3.1",
     "@types/lodash.omit": "^4.5.6",
