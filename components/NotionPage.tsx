@@ -1,26 +1,29 @@
-import * as React from 'react'
-import dynamic from 'next/dynamic'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import * as React from 'react';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-import cs from 'classnames'
-import { PageBlock } from 'notion-types'
-import { formatDate, getBlockTitle, getPageProperty } from 'notion-utils'
-import BodyClassName from 'react-body-classname'
-import { NotionRenderer } from 'react-notion-x'
-import TweetEmbed from 'react-tweet-embed'
-import { useSearchParam } from 'react-use'
 
-import * as config from '@/lib/config'
-import * as types from '@/lib/types'
-import { mapImageUrl } from '@/lib/map-image-url'
-import { getCanonicalPageUrl, mapPageUrl } from '@/lib/map-page-url'
-import { searchNotion } from '@/lib/search-notion'
+
+import cs from 'classnames';
+import { PageBlock } from 'notion-types';
+import { formatDate, getBlockTitle, getPageProperty } from 'notion-utils';
+import BodyClassName from 'react-body-classname';
+import { NotionRenderer } from 'react-notion-x';
+import TweetEmbed from 'react-tweet-embed';
+import { useSearchParam } from 'react-use';
+
+
+
+import * as config from '@/lib/config';
+import * as types from '@/lib/types';
+import { mapImageUrl } from '@/lib/map-image-url';
+import { getCanonicalPageUrl, mapPageUrl } from '@/lib/map-page-url';
+import { searchNotion } from '@/lib/search-notion';
 import { useDarkMode } from '@/lib/use-dark-mode'
 
 import { Footer } from './Footer'
-import { GitHubShareButton } from './GitHubShareButton'
 import { Loading } from './Loading'
 import { NotionPageHeader } from './NotionPageHeader'
 import { Page404 } from './Page404'
@@ -280,7 +283,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
         pageAside={pageAside}
         footer={footer}
       />
-
     </>
   )
 }
