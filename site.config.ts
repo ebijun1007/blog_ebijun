@@ -1,4 +1,5 @@
-import { siteConfig } from './lib/site-config'
+import { siteConfig } from './lib/site-config';
+
 
 export default siteConfig({
   // the site's root Notion page (required)
@@ -14,7 +15,8 @@ export default siteConfig({
   author: 'Jun Ebina',
 
   // open graph metadata (optional)
-  description: 'スタートアップで働いているWebエンジニアのブログです',
+  description:
+    'スタートアップで働いているWebエンジニアのブログです。プロダクトの0→1開発とか個人開発に関して発信しています。',
 
   // social usernames (optional)
   twitter: 'ebijun1007',
